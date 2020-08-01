@@ -11,29 +11,29 @@ def cal(n1, op, n2):
     return result
 
 def binary(list1):
-    bin_val = ['0', '1']
+    bin_val = ['0', '1', 'b']
     for b in list1:
         if b in bin_val:
             pass
-        elif b not in bin_val:
+        else:
             print("잘못 입력하셨습니다.")
             return num_input()
 
 def octal(list1):
-    oct_val = ['0', '1', '2', '3', '4', '5', '6', '7']
+    oct_val = ['0', '1', '2', '3', '4', '5', '6', '7', 'o']
     for o in list1:
         if o in oct_val:
             pass
-        elif o not in oct_val:
+        else:
             print("잘못 입력하셨습니다.")
             return num_input()
 
 def hexadecimal(list1):
-    hex_val = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+    hex_val = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'x']
     for h in list1:
         if h in hex_val:
             pass
-        elif h not in hex_val:
+        else:
             print("잘못 입력하셨습니다.")
             return num_input()
 
@@ -58,25 +58,25 @@ if __name__ == '__main__':
             num2 = int(num2, 2)
             cal(num1, operator, num2)
             print(bin(num1), operator, bin(num2), '=', bin(result))
-        elif num_type == '2':
+        if num_type == '2':
             num_input()
             octal(com)
             num1 = int(num1, 8)
             num2 = int(num2, 8)
             cal(num1, operator, num2)
             print(oct(num1), operator, oct(num2), '=', oct(result))
-        elif num_type == '3':
+        if num_type == '3':
             num_input()
             num1 = int(num1)
             num2 = int(num2)
             cal(num1, operator, num2)
             print(num1, operator, num2, '=', result)
-        elif num_type == '4':
+        if num_type == '4':
             num_input()
             hexadecimal(com)
             num1 = int(num1, 16)
             num2 = int(num2, 16)
             cal(num1, operator, num2)
             print(hex(num1), operator, hex(num2), '=', hex(result))
-        elif num_type == '0':
+        if num_type == '0':
             break
